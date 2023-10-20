@@ -1,6 +1,6 @@
 pub contract MyContract {
 
-    pub var people: {Address: Person}
+    pub var people: {Address: student}
     // Define a struct
     pub struct student {
         pub let name:String
@@ -19,8 +19,8 @@ pub contract MyContract {
         }
     }
 
-    pub fun addPerson( name:String,fname:String,lname:String,age:UInt,account:Address){
-        let newPerson=Person(_name:name,_fname:fname,_lname:lname,_age:age,_account:account)
+    pub fun addstudent( name:String,fname:String,mname:String,age:UInt,account:Address){
+        let newstudent=student(_name:name,_fname:fname,_mname:mname,_age:age,_account:account)
         self.people[account]=newstudent
     }
 
